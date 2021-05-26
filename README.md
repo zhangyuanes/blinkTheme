@@ -121,6 +121,14 @@ git config --global http.proxy "127.0.0.1:7777"
 git config --global --unset http.proxy
 ```
 
+## 关于github推送10054的问题
+
+fatal: unable to access 'https://github.com/zhangyuanes/blinkTheme.git/': OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054
+
+```bash
+git config --global http.postBuffer 5242880000   
+```
+
 ## License
 
 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
