@@ -240,15 +240,24 @@ myGallery:
   enable: true
   data:
     - /medias/banner/0.jpg
-    - /medias/banner/1.jpg
-    - /medias/banner/2.jpg
     - /medias/banner/3.jpg
     - /medias/banner/4.jpg
-    - /medias/banner/5.jpg
-    - /medias/banner/6.jpg
-    - /medias/banner/7.jpg
-    - /medias/banner/8.jpg
-    - /medias/banner/9.jpg
+    - https://gitee.com/yanbo01haomiao/pic/raw/master/assets/1.jpg
+    - https://gitee.com/yanbo01haomiao/pic/raw/master/assets/2.jpg
+    - https://gitee.com/yanbo01haomiao/pic/raw/master/assets/5.jpg
+    - https://gitee.com/yanbo01haomiao/pic/raw/master/assets/6.jpg
+    - https://gitee.com/yanbo01haomiao/pic/raw/master/assets/7.jpg
+    - https://gitee.com/yanbo01haomiao/pic/raw/master/assets/8.jpg
+    - https://gitee.com/yanbo01haomiao/pic/raw/master/assets/9.jpg
+    # - /medias/banner/1.jpg
+    # - /medias/banner/2.jpg
+    # - /medias/banner/3.jpg
+    # - /medias/banner/4.jpg
+    # - /medias/banner/5.jpg
+    # - /medias/banner/6.jpg
+    # - /medias/banner/7.jpg
+    # - /medias/banner/8.jpg
+    # - /medias/banner/9.jpg
 
 # Whether to display post-calender in the `archive` page
 # 设置在归档页面中是否显示'文章日历'控件
