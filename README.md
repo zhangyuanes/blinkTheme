@@ -36,7 +36,10 @@ npm run server
 ```
 访问`http://localhost:4000`即可看到页面。预先配置有hexo-admin，在url结尾加入`/admin`即可进入管理页面，可以在线md交互预览编辑。
 
-预览渲染没有问题可以使用命令推送到远程仓库：需要预先设置`_config.yml`中的部署配置
+预览渲染没有问题可以使用命令推送到gitpage远程仓库：需要预先设置`_config.yml`中的部署配置
+
+如果你没有设置这个gitpage仓库，[参考这里](https://zhangyuanes.github.io/2020/09/11/hello-world/)
+
 ```
 # Deployment
 deploy:
@@ -45,11 +48,11 @@ deploy:
   branch: master
 ```
 
-清除`source/_posts`下全部文章页，完成`_config.yml`中其他个性化配置后重新清理并生成渲染，预览后推送即可。
+清除`source/_posts`下全部文章页（但请至少保留一个md文件用于生成页面，否则build会失败），完成`_config.yml`中其他个性化配置后重新清理并生成渲染，预览后推送即可。
 
-本项目代码唯一需要用户单独存档的仅仅为`source/_posts`下的原始md文章页面以及对应的配图。
+本项目代码唯一需要用户单独存档的仅仅为`source/_posts`下的原始md文章页面以及对应的配图，配图建议使用图床，这样就不用担心相对引用，相关文章[参考这里](https://zhangyuanes.github.io/2021/01/19/ji-lu/bo-ke-da-jian/tu-chuang-da-jian/)。本仓库的配图还是比较大的，后续会逐渐修改为图床链接。
 
-补：配图请放在`source/medias`中，如果需要分类请在此文件夹下新建文件夹放置即可，在页面中引用地址为：`/medias/******.jpg`。
+补：如果不是图床的图片，配图请放在`source/medias`中，如果需要分类请在此文件夹下新建文件夹放置即可，在页面中引用地址为：`/medias/******.jpg`。
 
 ## License
 
