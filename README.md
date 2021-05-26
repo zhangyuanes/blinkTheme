@@ -48,6 +48,14 @@ deploy:
   branch: master
 ```
 
+推从到github.io仓库中
+
+```bash
+npm run deploy
+```
+
+当显示成功后刷新仓库，就可以访问到对应的页面了。
+
 清除`source/_posts`下全部文章页（但请至少保留一个md文件用于生成页面，否则build会失败），完成`_config.yml`中其他个性化配置后重新清理并生成渲染，预览后推送即可。
 
 本项目代码唯一需要用户单独存档的仅仅为`source/_posts`下的原始md文章页面以及对应的配图，配图建议使用图床，这样就不用担心相对引用，相关文章[参考这里](https://zhangyuanes.github.io/2021/01/19/ji-lu/bo-ke-da-jian/tu-chuang-da-jian/)。本仓库的配图还是比较大的，后续会逐渐修改为图床链接。
