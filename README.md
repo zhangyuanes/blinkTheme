@@ -111,6 +111,16 @@ tags:
 ```
 
 ### 如有其他问题请提交issue或发邮件询问。
+
+## 关于github推送不上去443问题
+
+设置VPN全局代理，然后推送完成后取消。例如：
+
+```bash
+git config --global http.proxy "127.0.0.1:7777" 
+git config --global --unset http.proxy
+```
+
 ## License
 
 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
