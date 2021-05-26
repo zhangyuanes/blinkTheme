@@ -47,7 +47,7 @@ range_max (float32) 最大的测量距离 [米]
 
 在world中拿到goal（目标点）和机器人所在位置坐标，分别为goal_（x，y），pose_（x，y）。然后计算goal与pose的欧式距离r，再使用atan2（dy，dx）计算出目标点相对当前位置的角度theta_goal，单位 [弧度]，其中dy = goal_（y）-pose_（y），dx同理。这里theta_goal是在世界坐标系中的，而非机器人坐标系。
 
-```c++
+```cpp
 pose_x = goal_.pose.position.x - pose_.pose.position.x;
 pose_y = goal_.pose.position.y - pose_.pose.position.y;
 float theta_goal = atan2(pose_y, pose_x);
@@ -70,7 +70,7 @@ $$
 
 这里将系数设置为GOAL_FORCE（default=1），需要进行世界坐标系的xy分解：
 
-```c++
+```cpp
 //常量定义
 #define PI 3.14
 #define GOAL_FORCE 1	  // 目标吸引力因子
@@ -115,7 +115,7 @@ $$
 1. 遍历激光数据，找到距离机器人最近的障碍物距离 temp_min，以及其对应的range[i]的下标 temp_min_i。
 2. 然后计算这个最近点对机器人的斥力。采用传统斥力公式。
 
-```c++
+```cpp
 //常量定义
 #define MAX_RANGE 0.3 //机器人探测半径，也可以理解为障碍物影响距离
 #define ROBOT_RADIUS 0.10 //机器人半径，默认机器人为圆形
@@ -218,7 +218,7 @@ for (int i = 0; i < total_points; i++){
 上一段代码是有几个错误的，包括之前说的计算出theta为世界坐标系中的弧度值，这里使用机器人坐标系的角度分解是错误的。但是我想说的重点在斥力计算的部分：这里代码含义为只要在机器人探测范围内有效的障碍物的粒子点都参与斥力计算，而且斥力是加和（+=）的，导致在机器人距离物体很近的时候，粒子很多，每个粒子都提供斥力，累和数值很大，所以后之后绝得将其修改为了一个粒子的影响。
 这个问题是在进行引力、斥力和合力的可视化之后才发现的，可视化的部分代码如下：将力的数据处理成PoseStamped格式进行发布，只显示方向，大小从topic输出的数值来看。pose中最重要的方向orientation，将theta转化为四元数输出，同理对引力theta_goal、斥力atan2(repulsion_resultant_y, repulsion_resultant_x)也是一样的做法。
 
-```c++
+```cpp
 std_msgs::Float32 force_msg;
 force_msg.data = force_x;
 force_x_pub_.publish(force_msg);
