@@ -10,7 +10,9 @@
 
 安装NodeJS（Windows，Linux，MacOS均可）。
 
-### 使用git克隆项目
+### Fork仓库后使用git克隆项目
+
+点击fork按钮fork到自己的账号下，这样你的配置就可以保存下来了。
 
 ```
 git clone https://github.com/zhangyuanes/blinkTheme.git
