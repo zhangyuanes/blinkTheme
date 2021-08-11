@@ -14,25 +14,25 @@
 
 点击fork按钮fork到自己的账号下，这样你的配置就可以保存下来了。
 
-```
+```bash
 git clone https://github.com/zhangyuanes/blinkTheme.git
 ```
 
-###  进入项目文件夹，安装依赖包
+### 进入项目文件夹，安装依赖包
 
-```
+```bash
 cd blinkTheme
 npm install
 ```
 
-###  清理并生成渲染
+### 清理并生成渲染
 
-```
+```bash
 npm run clean
 npm run build
 ```
 
-###  本地预览
+### 本地预览
 
 ```bash
 npm run server
@@ -40,7 +40,7 @@ npm run server
 
 访问`http://localhost:4000`即可看到页面。
 
-###  使用hexo-admin做后台dashboard
+### 使用hexo-admin做后台dashboard
 
 预先配置有hexo-admin，在url结尾加入`/admin`即可进入管理页面，可以在线md交互预览编辑。用户名和密码我配置的为：yanbo，你可以修改配置文件来自定义，相关配置在`_config.yml`中:
 
@@ -55,7 +55,7 @@ admin:
   deployCommand: 'hexo-deploy.bat'
 ```
 
-###  推送到github.io
+### 推送到github.io
 
 如果你没有设置这个gitpage仓库，[参考这里](https://zhangyuanes.github.io/2020/09/11/hello-world/).
 
@@ -110,7 +110,7 @@ tags:
 
 ```
 
-### 如有其他问题请提交issue或发邮件询问。
+### 如有其他问题请提交issue或发邮件询问
 
 ## 关于github推送不上去443问题
 
